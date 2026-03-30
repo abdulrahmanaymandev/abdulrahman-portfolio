@@ -1,0 +1,112 @@
+/* =========================================
+   ABOUT
+   ========================================= */
+.about_container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about_image_wrap { position: relative; }
+
+.about_image_frame {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(245, 166, 35, 0.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  aspect-ratio: 4/5;
+}
+
+.about_image_frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter 0.4s ease;
+}
+
+.about_image_frame:hover img { filter: grayscale(0%) contrast(1); }
+
+.about_image_border {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: -16px;
+  bottom: -16px;
+  border: 1px solid rgba(245, 166, 35, 0.18);
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.about_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(240,234,224,0.06);
+  border: 1px solid rgba(240,234,224,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about_card {
+  padding: 1.5rem 1rem;
+  background: #1C1915;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.about_card:hover { background: #252118; }
+
+.about_card_icon {
+  font-size: 1.3rem;
+  color: #F5A623;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.about_card h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(240,234,224,0.35);
+  margin-bottom: 0.3rem;
+}
+
+.about_card_val {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F0EAE0;
+  display: block;
+}
+
+.about_text {
+  font-size: 0.97rem;
+  color: rgba(240, 234, 224, 0.6);
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.about_text strong { color: #F5A623; font-weight: 600; }
+
+.about_cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .about_container { grid-template-columns: 1fr; gap: 3rem; }
+  .about_image_wrap { max-width: 360px; margin: 0 auto; }
+}

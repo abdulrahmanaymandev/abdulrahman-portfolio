@@ -1,0 +1,134 @@
+/* =========================================
+   SERVICES
+   ========================================= */
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ── Service Card ── */
+.service_card {
+  padding: 2.5rem 2rem;
+  background: #12100E;
+  border: 1px solid rgba(240,234,224,0.04);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.service_card:hover {
+  background: #171411;
+  border-color: rgba(245, 166, 35, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Subtle amber top glow on hover */
+.service_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 166, 35, 0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service_card:hover::before {
+  opacity: 1;
+}
+
+/* Number - elegant outlined style */
+.service_number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(240,234,224,0.08);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.service_card:hover .service_number {
+  -webkit-text-stroke: 1px rgba(245, 166, 35, 0.5);
+  color: rgba(245, 166, 35, 0.05);
+}
+
+.service_card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #F0EAE0;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.service_card p {
+  font-size: 0.9rem;
+  color: rgba(240,234,224,0.45);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Features List */
+.service_features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(240,234,224,0.05);
+}
+
+.service_feature {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: rgba(240,234,224,0.55);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.service_card:hover .service_feature {
+  color: rgba(240,234,224,0.8);
+}
+
+/* Star icon using CSS */
+.service_feature::before {
+  content: '✦';
+  color: #F5A623;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.service_card:hover .service_feature::before {
+  opacity: 1;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+  .services_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services_grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
