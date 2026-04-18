@@ -32,13 +32,23 @@ const About = () => {
                 <h5>Academics</h5>
                 <span className="about_card_val">4.93 / 5.0</span>
               </article>
+
+              {/* +7 Projects */}
               <article className="about_card">
+                <span className="about_card_icon">
+                  <VscFolderLibrary />
+                </span>
+                <h5>Projects</h5>
+                <span className="about_card_val">+7</span>
+              </article>
+
+              {/* <article className="about_card">
                 <span className="about_card_icon">
                   <FiUsers />
                 </span>
                 <h5>Leadership</h5>
                 <span className="about_card_val">5+ Years</span>
-              </article>
+              </article> */}
               <article className="about_card">
                 <span className="about_card_icon">
                   <VscFolderLibrary />
@@ -53,16 +63,18 @@ const About = () => {
               graduate (GPA 4.93/5.00) with expertise in building modern,
               responsive web applications using <strong>React.js</strong> and
               integrating AI-powered features. Developed multiple real-world
-              projects including dashboards and AI-based platforms. Bringing{" "}
+              projects including dashboards and AI-based platforms.
+              {/* Bringing{" "}
               <strong>5 years of professional experience</strong> in fast-paced
-              business environments, with strong problem-solving, communication,
-              and user-focused development skills.
+              business environments,  */}{" "}
+              with strong problem-solving, communication, and user-focused
+              development skills.
             </p>
             <p className="about_text">
-              My unique background allows me to build robust, user-friendly
-              frontend applications while understanding business objectives.
-              Whether I'm building AI-driven platforms or managing operational
-              workflows, I bring precision and effective communication.
+              My background allows me to build robust, user-friendly web
+              applications while understanding business objectives. Whether I'm
+              building AI-driven platforms or managing operational workflows, I
+              bring precision and effective communication.
             </p>
 
             <div className="about_cta">

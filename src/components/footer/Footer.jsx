@@ -13,8 +13,8 @@ function Footer() {
               Abdulrahman <span>.</span>
             </a>
             <p className="footer_tagline">
-              Frontend developer crafting fast, beautiful web experiences with
-              React &amp; modern tooling.
+              Web developer crafting fast, beautiful web experiences with MERN
+              Stack &amp; modern tooling.
             </p>
             <div className="footer_socials">
               <a

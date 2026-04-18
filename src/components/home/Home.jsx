@@ -19,7 +19,9 @@ function Home() {
             <em>Ayman</em>
           </h1>
 
-          <div className="hero_role">React · Python · AI</div>
+          <div className="hero_role">
+            React.js · Node.js · Express.js · MongoDB · Python · AI
+          </div>
 
           <p className="hero_description">
             I craft fast, beautiful, and accessible digital experiences.
@@ -45,10 +47,17 @@ function Home() {
               <span className="hero_stat_value">2026</span>
               <span className="hero_stat_label">Grad Year</span>
             </div>
+
+            {/* +7 Projects */}
             <div className="hero_stat">
+              <span className="hero_stat_value">+7</span>
+              <span className="hero_stat_label">Projects</span>
+            </div>
+
+            {/* <div className="hero_stat">
               <span className="hero_stat_value">5</span>
               <span className="hero_stat_label">Years Exp.</span>
-            </div>
+            </div> */}
           </div>
         </div>
 
