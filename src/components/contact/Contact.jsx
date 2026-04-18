@@ -76,8 +76,7 @@ function Contact() {
           <p className="section-tag">Get In Touch</p>
           <h2 className="section-title">Contact Me</h2>
           <p className="section-subtitle">
-            Have a project in mind or just want to say hi? I'd love to hear from
-            you.
+            Have a project in mind? Let's talk.
           </p>
         </div>
 
@@ -85,8 +84,9 @@ function Contact() {
           {/* Left Info */}
           <div className="contact_info">
             <p className="contact_intro">
-              I'm currently available for freelance projects and full-time
-              opportunities. Reach out through any of the channels below.
+              I'm currently available for Coop Training Program, internship,
+              freelance projects and full-time opportunities. Reach out through
+              any of the channels below.
             </p>
 
             {contactCards.map(({ id, icon, title, value, href }) => (
