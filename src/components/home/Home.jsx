@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 import ME from "../../assets/Abdulrahman.webp";
-import CV from "../../assets/Abdulrahman_Ayman_Web_Developer_CV.pdf";
+import CV from "../../assets/Abdulrahman_Ayman_CV.pdf";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { RiDownloadLine, RiMailSendLine } from "react-icons/ri";
 

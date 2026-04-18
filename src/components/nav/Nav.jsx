@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
-import CV from "../../assets/Abdulrahman_Ayman_Web_Developer_CV.pdf";
+import CV from "../../assets/Abdulrahman_Ayman_CV.pdf";
 import {
   RiHome5Line,
   RiUser3Line,
