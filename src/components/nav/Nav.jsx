@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
-import CV from "../../assets/Abdulrahman_Ayman_CV.pdf";
+import CV1 from "../../assets/Abdulrahman_Ayman_CV.pdf";
+import CV2 from "../../assets/Abdulrahman_Ayman_T_CV.pdf";
+
 import {
   RiHome5Line,
   RiUser3Line,
@@ -8,6 +10,9 @@ import {
   RiLayoutGridLine,
   RiCodeSSlashLine,
   RiMailSendLine,
+  RiFileTextLine,
+  RiArrowDropDownLine,
+  RiDownloadCloud2Line,
 } from "react-icons/ri";
 
 const navLinks = [
@@ -42,7 +47,7 @@ const navLinks = [
 function Nav() {
   const [activeNav, setActiveNav] = useState("#");
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [cvMenuOpen, setCvMenuOpen] = useState(false);
   useEffect(() => {
     const sectionIds = ["about", "projects", "skills", "contact"];
     const observer = new IntersectionObserver(
@@ -98,9 +103,45 @@ function Nav() {
         ))}
       </div>
 
-      <a href={CV} download className="nav-cta" aria-label="Download CV">
-        Download CV
-      </a>
+      <div
+        className="cv-dropdown"
+        onMouseEnter={() => setCvMenuOpen(true)}
+        onMouseLeave={() => setCvMenuOpen(false)}
+        onClick={() => setCvMenuOpen(!cvMenuOpen)}
+      >
+        <button className="nav-cta" aria-label="Download CV">
+          Resume{" "}
+          <RiArrowDropDownLine
+            className={`dropdown-icon ${cvMenuOpen ? "open" : ""}`}
+          />
+        </button>
+
+        <div className={`cv-menu ${cvMenuOpen ? "open" : ""}`}>
+          <div className="cv-menu-header">
+            <span>Select Resume Type</span>
+          </div>
+          <a href={CV1} download onClick={(e) => e.stopPropagation()}>
+            <div className="cv-icon-wrapper">
+              <RiFileTextLine />
+            </div>
+            <div className="cv-info">
+              <span className="cv-title">Full-Time CV</span>
+              <span className="cv-desc">Standard professional resume</span>
+            </div>
+            <RiDownloadCloud2Line className="download-icon" />
+          </a>
+          <a href={CV2} download onClick={(e) => e.stopPropagation()}>
+            <div className="cv-icon-wrapper">
+              <RiFileTextLine />
+            </div>
+            <div className="cv-info">
+              <span className="cv-title">Internship CV</span>
+              <span className="cv-desc">Academic & entry-level roles</span>
+            </div>
+            <RiDownloadCloud2Line className="download-icon" />
+          </a>
+        </div>
+      </div>
 
       <button
         className="nav-toggle"

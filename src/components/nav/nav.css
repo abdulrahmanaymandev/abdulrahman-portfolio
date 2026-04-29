@@ -115,6 +115,155 @@ nav {
   transition: all 0.25s ease;
 }
 
+/* CV Dropdown */
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.cv-dropdown .nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.cv-menu {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  right: 0;
+  width: 280px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  background: rgba(18, 15, 12, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(245, 166, 35, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.02);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.98);
+  transform-origin: top right;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.cv-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Invisible bridge to prevent mouseleave when moving to the menu */
+.cv-menu::before {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+  background: transparent;
+}
+
+.cv-menu-header {
+  padding: 0.5rem 0.8rem 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(240, 234, 224, 0.4);
+  margin-bottom: 0.2rem;
+}
+
+.cv-menu a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.cv-menu a:hover {
+  background: rgba(245, 166, 35, 0.06);
+}
+
+.cv-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(245, 166, 35, 0.1);
+  color: #F5A623;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.cv-menu a:hover .cv-icon-wrapper {
+  background: #F5A623;
+  color: #0D0B09;
+}
+
+.cv-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex-grow: 1;
+}
+
+.cv-title {
+  color: rgba(240, 234, 224, 0.95);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.cv-menu a:hover .cv-title {
+  color: #F5A623;
+}
+
+.cv-desc {
+  color: rgba(240, 234, 224, 0.45);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.download-icon {
+  color: rgba(245, 166, 35, 0);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  transform: translateX(-10px);
+}
+
+.cv-menu a:hover .download-icon {
+  color: #F5A623;
+  transform: translateX(0);
+}
 /* =========================================
    RESPONSIVE
    ========================================= */
@@ -138,7 +287,9 @@ nav {
 
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
-  .nav-cta { display: none; }
+  .cv-dropdown {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
