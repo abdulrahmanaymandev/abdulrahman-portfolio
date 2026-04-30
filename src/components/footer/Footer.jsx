@@ -13,8 +13,8 @@ function Footer() {
               abdulrahman<span>.</span>
             </a>
             <p className="footer_tagline">
-              Full Stack Developer crafting scalable, data-driven web applications
-              and AI-powered systems.
+              Full Stack Developer crafting scalable, data-driven web
+              applications and AI-powered systems.
             </p>
             <div className="footer_socials">
               <a
@@ -50,12 +50,6 @@ function Footer() {
               <li>
                 <a href="#projects">Projects</a>
               </li>
-            </ul>
-          </div>
-
-          <div className="footer_nav_col">
-            <h4>Connect</h4>
-            <ul>
               <li>
                 <a href="#skills">Skills</a>
               </li>
@@ -65,6 +59,12 @@ function Footer() {
               <li>
                 <a href="#contact">Contact</a>
               </li>
+            </ul>
+          </div>
+
+          <div className="footer_nav_col">
+            <h4>Connect</h4>
+            <ul>
               <li>
                 <a
                   href="https://github.com/abdulrahmanaymandev"
