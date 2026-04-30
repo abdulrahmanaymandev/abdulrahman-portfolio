@@ -12,25 +12,6 @@ import { RiExternalLinkLine } from "react-icons/ri";
 const projectsData = [
   {
     id: 1,
-    image: IMG3,
-    title: "PATHLY — AI Learning Platform",
-    description:
-      "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
-    tags: ["React", "OpenAI API", "LangChain", "FastAPI"],
-    github: "https://github.com/abdulrahmanaymandev",
-    demo: "https://github.com/abdulrahmanaymandev",
-  },
-  {
-    id: 2,
-    image: IMG2,
-    title: "Blog Platform",
-    description: "Full-stack blog platform with dynamic UI rendering and structured backend logic following scalable development practices.",
-    tags: ["MERN Stack", "MongoDB", "Express", "React"],
-    github: "https://github.com/abdulrahmanaymandev",
-    demo: "https://github.com/abdulrahmanaymandev",
-  },
-  {
-    id: 3,
     image: IMG1,
     title: "Cars Admin Dashboard",
     description:
@@ -45,8 +26,9 @@ const projectsData = [
       backgroundColor: "#0a0a0b",
     },
   },
+
   {
-    id: 4,
+    id: 2,
     image: IMG4,
     title: "E-Commerce Web Application",
     description:
@@ -61,24 +43,44 @@ const projectsData = [
     },
   },
   {
-    id: 5,
-    image: IMG5,
-    title: "React Calculator",
+    id: 3,
+    image: IMG3,
+    title: "PATHLY — AI Learning Platform",
     description:
-      "Professional calculator app with a refined, modern interface and full arithmetic capabilities.",
-    tags: ["React", "JavaScript", "CSS"],
-    github: "https://github.com/abdulrahmanaymandev/react-calculator",
-    demo: "https://abdulrahmandev-calculator.netlify.app/",
+      "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
+    tags: ["React", "OpenAI API", "LangChain", "FastAPI"],
+    github: "https://github.com/abdulrahmanaymandev",
+    demo: "https://github.com/abdulrahmanaymandev",
+  },
+  {
+    id: 4,
+    image: IMG2,
+    title: "Blog Platform",
+    description:
+      "Full-stack blog platform with dynamic UI rendering and structured backend logic following scalable development practices.",
+    tags: ["MERN Stack", "MongoDB", "Express", "React"],
+    github: "https://github.com/abdulrahmanaymandev",
+    demo: "https://github.com/abdulrahmanaymandev",
+  },
+
+  {
+    id: 5,
+    image: IMG6,
+    title: "Modern Todo List",
+    description: "Productivity app with persistent state management.",
+    tags: ["React", "Vite", "LocalStorage"],
+    github: "https://github.com/abdulrahmanaymandev/react-todo-app",
+    demo: "https://abdulrahman-todo.netlify.app/",
   },
   {
     id: 6,
-    image: IMG6,
-    title: "Personal Portfolio Website",
+    image: IMG5,
+    title: "React Calculator",
     description:
-      "Modern personal website to showcase projects and technical skills with high-end editorial aesthetics.",
-    tags: ["React", "CSS3", "Responsive"],
-    github: "https://github.com/abdulrahmanaymandev/abdulrahman-portfolio",
-    demo: "https://abdulrahmanayman.netlify.app",
+      "Calculator application that performs arithmetic operations with a clean interface.",
+    tags: ["React", "JavaScript", "CSS"],
+    github: "https://github.com/abdulrahmanaymandev/react-calculator",
+    demo: "https://abdulrahmandev-calculator.netlify.app/",
   },
 ];
 
