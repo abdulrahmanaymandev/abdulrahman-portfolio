@@ -12,6 +12,25 @@ import { RiExternalLinkLine } from "react-icons/ri";
 const projectsData = [
   {
     id: 1,
+    image: IMG3,
+    title: "PATHLY — AI Learning Platform",
+    description:
+      "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
+    tags: ["React", "OpenAI API", "LangChain", "FastAPI"],
+    github: "https://github.com/abdulrahmanaymandev",
+    demo: "https://github.com/abdulrahmanaymandev",
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: "Blog Platform",
+    description: "Full-stack blog platform with dynamic UI rendering and structured backend logic following scalable development practices.",
+    tags: ["MERN Stack", "MongoDB", "Express", "React"],
+    github: "https://github.com/abdulrahmanaymandev",
+    demo: "https://github.com/abdulrahmanaymandev",
+  },
+  {
+    id: 3,
     image: IMG1,
     title: "Cars Admin Dashboard",
     description:
@@ -27,31 +46,12 @@ const projectsData = [
     },
   },
   {
-    id: 2,
-    image: IMG2,
-    title: "Modern Todo List",
-    description: "Productivity app with persistent state management and clean UX.",
-    tags: ["React", "Vite", "LocalStorage"],
-    github: "https://github.com/abdulrahmanaymandev/react-todo-app",
-    demo: "https://abdulrahman-todo.netlify.app/",
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: "PATHLY — AI Learning Platform",
-    description:
-      "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
-    tags: ["React", "OpenAI API", "LangChain"],
-    github: "https://github.com/abdulrahmanaymandev",
-    demo: "https://github.com/abdulrahmanaymandev",
-  },
-  {
     id: 4,
     image: IMG4,
-    title: "AI Customer Support",
+    title: "E-Commerce Web Application",
     description:
-      "AI-powered customer support system built during training at QT.",
-    tags: ["Streamlit", "Python", "LangChain", "OpenAI"],
+      "Responsive e-commerce frontend integrated with external APIs, featuring product listing, filtering, and dynamic cart functionality.",
+    tags: ["React", "API Integration", "CSS"],
     github: "https://github.com/abdulrahmanaymandev",
     demo: "https://github.com/abdulrahmanaymandev",
     imgStyle: {
@@ -73,12 +73,12 @@ const projectsData = [
   {
     id: 6,
     image: IMG6,
-    title: "AI Academic Tracker",
+    title: "Personal Portfolio Website",
     description:
-      "Multi-agent AI platform with task notifications, automated attendance, report generation, and meeting scheduling.",
-    tags: ["AI Agents", "Python", "Streamlit", "LangChain"],
-    github: "https://github.com/abdulrahmanaymandev",
-    demo: "https://github.com/abdulrahmanaymandev",
+      "Modern personal website to showcase projects and technical skills with high-end editorial aesthetics.",
+    tags: ["React", "CSS3", "Responsive"],
+    github: "https://github.com/abdulrahmanaymandev/abdulrahman-portfolio",
+    demo: "https://abdulrahmanayman.netlify.app",
   },
 ];
 

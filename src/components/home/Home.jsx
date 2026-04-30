@@ -22,13 +22,13 @@ function Home() {
             Abdulrahman <span className="name_accent">Ayman</span>
           </h1>
 
-          <p className="hero_title_line">Web Developer</p>
+          <p className="hero_title_line">Full Stack Developer (MERN)</p>
 
           <p className="hero_description">
-            I build <strong>fast, beautiful, and accessible</strong> web
-            experiences. CS graduate specializing in React, full-stack
-            development, and AI-powered platforms — turning complex problems
-            into clean, elegant interfaces.
+            I build <strong>scalable, data-driven</strong> web applications and
+            AI-powered systems. CS graduate specializing in React.js, Node.js,
+            and integrating AI workflows — turning complex problems into
+            clean, elegant interfaces.
           </p>
 
           <div className="cta">
@@ -79,7 +79,7 @@ function Home() {
 
           <div className="hero_image_wrap">
             <div className="hero_image_frame">
-              <img src={ME} alt="Abdulrahman Ayman — Web Developer" />
+              <img src={ME} alt="Abdulrahman Ayman — Full Stack Developer" />
             </div>
             <div className="hero_badge hero_badge_1">
               <p className="badge_label">Available for work</p>

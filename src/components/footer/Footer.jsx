@@ -13,8 +13,8 @@ function Footer() {
               abdulrahman<span>.</span>
             </a>
             <p className="footer_tagline">
-              Web developer crafting fast, beautiful digital experiences with
-              React, Node.js &amp; modern tooling.
+              Full Stack Developer crafting scalable, data-driven web applications
+              and AI-powered systems.
             </p>
             <div className="footer_socials">
               <a
@@ -58,6 +58,9 @@ function Footer() {
             <ul>
               <li>
                 <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>

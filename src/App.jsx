@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
+import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
@@ -32,6 +33,7 @@ function App() {
       <About />
       <Projects />
       <Skills />
+      <Experience />
       <Contact />
       <Footer />
     </>

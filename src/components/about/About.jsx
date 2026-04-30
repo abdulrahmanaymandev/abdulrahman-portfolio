@@ -55,15 +55,16 @@ const About = () => {
 
             <p className="about_text">
               I'm <strong>Abdulrahman Ayman</strong> — a Computer Science
-              graduate with a 4.93/5.00 GPA and a focus on building modern,
-              responsive web applications. I work primarily with{" "}
-              <strong>React.js</strong> and the MERN stack, and I enjoy
-              integrating AI-powered features into real-world projects.
+              graduate (GPA 4.93/5.00) with hands-on experience in building scalable
+              full-stack web applications and AI-powered systems. I work primarily
+              with React.js, Node.js, and REST APIs, and I have a strong focus on
+              building data-driven platforms.
             </p>
             <p className="about_text">
-              I've built dashboards, AI learning platforms, and customer
-              support systems — always focusing on clean code, thoughtful UX,
-              and solving real problems. I bring strong problem-solving and
+              I've developed multiple real-world projects, including an AI-driven
+              learning platform (PATHLY) that generates personalized learning
+              paths based on job market data, as well as full-stack blog platforms
+              and admin dashboards. I bring strong problem-solving and
               communication skills to every team I work with.
             </p>
 

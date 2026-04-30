@@ -4,37 +4,28 @@ import { FiMonitor, FiDatabase, FiCpu, FiTool } from "react-icons/fi";
 
 const skillCategories = [
   {
-    title: "Front-End Development",
+    title: "Frontend",
     icon: <FiMonitor />,
     description: "Building responsive and interactive user interfaces.",
-    skills: ["React.js", "Next.js", "JavaScript", "HTML", "CSS", "Tailwind"],
+    skills: ["React.js", "Next.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
   },
   {
-    title: "Back-End & APIs",
-    icon: <FiDatabase />,
-    description: "Developing robust server-side logic and managing data.",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "Python",
-      "Django",
-      "SQL",
-      "MongoDB",
-      "PostgreSQL",
-    ],
-  },
-  {
-    title: "AI & Digital Solutions",
+    title: "Backend",
     icon: <FiCpu />,
-    description: "Implementing intelligent features and AI-driven platforms.",
-    skills: ["OpenAI API", "LangChain", "Streamlit", "CrewAI"],
+    description: "Developing robust server-side logic and REST APIs.",
+    skills: ["Node.js", "Express.js", "REST APIs", "Python", "Django"],
   },
   {
-    title: "Tools & Systems",
+    title: "Databases",
+    icon: <FiDatabase />,
+    description: "Structuring and managing application data.",
+    skills: ["MongoDB", "PostgreSQL", "SQL"],
+  },
+  {
+    title: "AI & Tools",
     icon: <FiTool />,
-    description: "Ensuring smooth workflows and deploying reliable systems.",
-    skills: ["Git", "GitHub", "Linux", "Networking Fundamentals"],
+    description: "Implementing AI features and utilizing developer tools.",
+    skills: ["OpenAI API", "LangChain", "Streamlit", "CrewAI", "Git", "GitHub", "Linux"],
   },
 ];
 

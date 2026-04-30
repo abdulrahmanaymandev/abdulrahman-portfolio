@@ -1,0 +1,126 @@
+/* =========================================
+   EXPERIENCE
+   ========================================= */
+#experience {
+  border-top: 1px solid var(--border);
+}
+
+.experience_grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience_card {
+  padding: 2.5rem 2rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: all var(--duration) var(--ease-out);
+  cursor: default;
+  box-shadow: var(--shadow-sm);
+}
+
+.experience_card:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.experience_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease-out);
+}
+
+.experience_card:hover::before {
+  opacity: 1;
+}
+
+.exp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.exp_header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.exp_date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+  background: var(--accent-subtle);
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  border: 1px solid var(--accent-muted);
+}
+
+.exp_role {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.exp_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.exp_detail_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: color var(--duration) var(--ease-out);
+}
+
+.experience_card:hover .exp_detail_item {
+  color: var(--text-primary);
+}
+
+.exp_detail_item::before {
+  content: '→';
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 0.2rem;
+}
+
+.experience_card:hover .exp_detail_item::before {
+  opacity: 1;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 600px) {
+  .exp_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
