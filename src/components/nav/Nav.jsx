@@ -6,7 +6,6 @@ import CV2 from "../../assets/Abdulrahman_Ayman_T_CV.pdf";
 import {
   RiHome5Line,
   RiUser3Line,
-  RiBriefcase4Line,
   RiLayoutGridLine,
   RiCodeSSlashLine,
   RiMailSendLine,
@@ -18,12 +17,6 @@ import {
 const navLinks = [
   { href: "#", icon: <RiHome5Line />, id: "header", label: "Home" },
   { href: "#about", icon: <RiUser3Line />, id: "about", label: "About" },
-  // {
-  //   href: "#services",
-  //   icon: <RiBriefcase4Line />,
-  //   id: "services",
-  //   label: "Services",
-  // },
   {
     href: "#projects",
     icon: <RiLayoutGridLine />,
@@ -48,6 +41,14 @@ function Nav() {
   const [activeNav, setActiveNav] = useState("#");
   const [menuOpen, setMenuOpen] = useState(false);
   const [cvMenuOpen, setCvMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useEffect(() => {
     const sectionIds = ["about", "projects", "skills", "contact"];
     const observer = new IntersectionObserver(
@@ -83,9 +84,13 @@ function Nav() {
   };
 
   return (
-    <nav role="navigation" aria-label="Main navigation">
+    <nav
+      role="navigation"
+      aria-label="Main navigation"
+      className={scrolled ? "scrolled" : ""}
+    >
       <a href="#" className="nav-brand" onClick={() => handleLinkClick("#")}>
-        Abdulrahman <span>.</span>
+        abdulrahman<span>.</span>
       </a>
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
@@ -118,7 +123,7 @@ function Nav() {
 
         <div className={`cv-menu ${cvMenuOpen ? "open" : ""}`}>
           <div className="cv-menu-header">
-            <span>Select Resume Type</span>
+            <span>Select Resume</span>
           </div>
           <a href={CV1} download onClick={(e) => e.stopPropagation()}>
             <div className="cv-icon-wrapper">

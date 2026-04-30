@@ -3,35 +3,37 @@ import "./home.css";
 import ME from "../../assets/Abdulrahman.webp";
 import CV from "../../assets/Abdulrahman_Ayman_CV.pdf";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { RiDownloadLine, RiMailSendLine } from "react-icons/ri";
+import { RiDownloadLine, RiArrowRightLine } from "react-icons/ri";
 
 function Home() {
   return (
     <header id="home">
-      <div className="container home_container">
+      <div className="home_container">
         {/* ── LEFT: TEXT ── */}
         <div className="hero_text">
-          <div className="hero_eyebrow">Web Developer</div>
-
-          <h1 className="hero_name">
-            Abdulrahman
-            <br />
-            <em>Ayman</em>
-          </h1>
-
-          <div className="hero_role">
-            React.js · Node.js · Express.js · MongoDB · Python · AI
+          <div className="hero_status">
+            <span className="hero_status_dot" />
+            <span className="hero_status_text">Open to opportunities</span>
           </div>
 
+          <p className="hero_greeting">Hi, I'm</p>
+
+          <h1 className="hero_name">
+            Abdulrahman <span className="name_accent">Ayman</span>
+          </h1>
+
+          <p className="hero_title_line">Web Developer</p>
+
           <p className="hero_description">
-            I craft fast, beautiful, and accessible digital experiences.
-            Combining technical excellence with professional leadership to build
-            robust, modern user interfaces and intelligent web platforms.
+            I build <strong>fast, beautiful, and accessible</strong> web
+            experiences. CS graduate specializing in React, full-stack
+            development, and AI-powered platforms — turning complex problems
+            into clean, elegant interfaces.
           </p>
 
           <div className="cta">
             <a href="#contact" className="btn btn-primary">
-              <RiMailSendLine /> Let's Work Together
+              <RiArrowRightLine /> Let's Talk
             </a>
             <a href={CV} download className="btn">
               <RiDownloadLine /> Download CV
@@ -44,20 +46,13 @@ function Home() {
               <span className="hero_stat_label">GPA / 5.00</span>
             </div>
             <div className="hero_stat">
+              <span className="hero_stat_value">7+</span>
+              <span className="hero_stat_label">Projects</span>
+            </div>
+            <div className="hero_stat">
               <span className="hero_stat_value">2026</span>
               <span className="hero_stat_label">Grad Year</span>
             </div>
-
-            {/* +7 Projects */}
-            <div className="hero_stat">
-              <span className="hero_stat_value">+7</span>
-              <span className="hero_stat_label">Projects</span>
-            </div>
-
-            {/* <div className="hero_stat">
-              <span className="hero_stat_value">5</span>
-              <span className="hero_stat_label">Years Exp.</span>
-            </div> */}
           </div>
         </div>
 
@@ -83,9 +78,8 @@ function Home() {
           </div>
 
           <div className="hero_image_wrap">
-            <div className="hero_accent_square" />
             <div className="hero_image_frame">
-              <img src={ME} alt="Abdulrahman Ayman — Frontend Developer" />
+              <img src={ME} alt="Abdulrahman Ayman — Web Developer" />
             </div>
             <div className="hero_badge hero_badge_1">
               <p className="badge_label">Available for work</p>

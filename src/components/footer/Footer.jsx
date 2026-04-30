@@ -10,11 +10,11 @@ function Footer() {
         <div className="footer_top">
           <div className="footer_brand">
             <a href="#" className="footer_logo">
-              Abdulrahman <span>.</span>
+              abdulrahman<span>.</span>
             </a>
             <p className="footer_tagline">
-              Web developer crafting fast, beautiful web experiences with MERN
-              Stack &amp; modern tooling.
+              Web developer crafting fast, beautiful digital experiences with
+              React, Node.js &amp; modern tooling.
             </p>
             <div className="footer_socials">
               <a

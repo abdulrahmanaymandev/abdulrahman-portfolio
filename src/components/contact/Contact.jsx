@@ -72,21 +72,21 @@ function Contact() {
   return (
     <section id="contact">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <p className="section-tag">Get In Touch</p>
-          <h2 className="section-title">Contact Me</h2>
+          <h2 className="section-title">Let's Work Together</h2>
           <p className="section-subtitle">
-            Have a project in mind? Let's talk.
+            Have a project or opportunity in mind? I'd love to hear from you.
           </p>
         </div>
 
         <div className="contact_wrapper">
           {/* Left Info */}
-          <div className="contact_info">
+          <div className="contact_info reveal">
             <p className="contact_intro">
-              I'm currently available for Coop Training Program, internship,
-              freelance projects and full-time opportunities. Reach out through
-              any of the channels below.
+              I'm currently available for Co-op training, internships,
+              freelance projects, and full-time opportunities. Reach out
+              through any of the channels below.
             </p>
 
             {contactCards.map(({ id, icon, title, value, href }) => (
@@ -107,7 +107,7 @@ function Contact() {
           </div>
 
           {/* Right Form */}
-          <div className="contact_form_wrap">
+          <div className="contact_form_wrap reveal">
             <h3 className="contact_form_title">Send a Message</h3>
             <p className="contact_form_sub">
               Fill out the form and I'll get back to you shortly.
@@ -124,7 +124,7 @@ function Contact() {
                     id="contact_name"
                     type="text"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="Your name"
                     required
                   />
                 </div>
@@ -134,7 +134,7 @@ function Contact() {
                     id="contact_email"
                     type="email"
                     name="email"
-                    placeholder="john@example.com"
+                    placeholder="you@example.com"
                     required
                   />
                 </div>
@@ -145,7 +145,7 @@ function Contact() {
                 <textarea
                   id="contact_message"
                   name="message"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about your project or opportunity..."
                   rows={6}
                   required
                 />
@@ -153,12 +153,12 @@ function Contact() {
 
               {sendStatus === "success" && (
                 <p className="form_status success">
-                  ✅ Message sent successfully! I'll be in touch soon.
+                  ✓ Message sent successfully! I'll be in touch soon.
                 </p>
               )}
               {sendStatus === "error" && (
                 <p className="form_status error">
-                  ❌ Something went wrong. Please try again.
+                  Something went wrong. Please try again.
                 </p>
               )}
 

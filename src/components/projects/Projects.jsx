@@ -23,14 +23,14 @@ const projectsData = [
     imgStyle: {
       objectFit: "contain",
       padding: "10px",
-      backgroundColor: "#0D0B09",
+      backgroundColor: "#0a0a0b",
     },
   },
   {
     id: 2,
     image: IMG2,
     title: "Modern Todo List",
-    description: "Productivity app with persistent state management.",
+    description: "Productivity app with persistent state management and clean UX.",
     tags: ["React", "Vite", "LocalStorage"],
     github: "https://github.com/abdulrahmanaymandev/react-todo-app",
     demo: "https://abdulrahman-todo.netlify.app/",
@@ -38,7 +38,7 @@ const projectsData = [
   {
     id: 3,
     image: IMG3,
-    title: "PATHLY (AI Learning Platform)",
+    title: "PATHLY — AI Learning Platform",
     description:
       "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
     tags: ["React", "OpenAI API", "LangChain"],
@@ -51,13 +51,13 @@ const projectsData = [
     title: "AI Customer Support",
     description:
       "AI-powered customer support system built during training at QT.",
-    tags: ["Streamlit", "Python", "LangChain", "OpenAI API"],
+    tags: ["Streamlit", "Python", "LangChain", "OpenAI"],
     github: "https://github.com/abdulrahmanaymandev",
     demo: "https://github.com/abdulrahmanaymandev",
     imgStyle: {
       objectFit: "contain",
       padding: "10px",
-      backgroundColor: "#0D0B09",
+      backgroundColor: "#0a0a0b",
     },
   },
   {
@@ -65,7 +65,7 @@ const projectsData = [
     image: IMG5,
     title: "React Calculator",
     description:
-      "A professional, full-featured calculator application built with React, featuring a modern and refined user interface.",
+      "Professional calculator app with a refined, modern interface and full arithmetic capabilities.",
     tags: ["React", "JavaScript", "CSS"],
     github: "https://github.com/abdulrahmanaymandev/react-calculator",
     demo: "https://abdulrahmandev-calculator.netlify.app/",
@@ -75,8 +75,8 @@ const projectsData = [
     image: IMG6,
     title: "AI Academic Tracker",
     description:
-      "AI platform with multi-agent architecture that provides daily task notifications, automates attendance, generates reports, and schedules meetings.",
-    tags: ["AI Agents", "Python", "Streamlit", "LangChain", "OpenAI API"],
+      "Multi-agent AI platform with task notifications, automated attendance, report generation, and meeting scheduling.",
+    tags: ["AI Agents", "Python", "Streamlit", "LangChain"],
     github: "https://github.com/abdulrahmanaymandev",
     demo: "https://github.com/abdulrahmanaymandev",
   },
@@ -86,16 +86,16 @@ function Projects() {
   return (
     <section id="projects">
       <div className="container">
-        <div className="section-header">
-          <p className="section-tag">My Recent Work</p>
-          <h2 className="section-title">Projects</h2>
+        <div className="section-header reveal">
+          <p className="section-tag">Recent Work</p>
+          <h2 className="section-title">Selected Projects</h2>
           <p className="section-subtitle">
-            A curated selection of projects that showcase my skills and passion
-            for building great products.
+            A curated collection of projects that demonstrate my technical
+            skills and passion for building useful products.
           </p>
         </div>
 
-        <div className="projects_grid">
+        <div className="projects_grid reveal-stagger">
           {projectsData.map(
             ({
               id,

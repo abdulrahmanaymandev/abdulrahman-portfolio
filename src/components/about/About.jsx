@@ -2,28 +2,31 @@ import React from "react";
 import "./about.css";
 import ME from "../../assets/Abdulrahman.webp";
 import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import { RiGraduationCapLine } from "react-icons/ri";
 
 const About = () => {
   return (
     <section id="about">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <p className="section-tag">Who I Am</p>
           <h2 className="section-title">About Me</h2>
-          <div className="divider" />
+          <p className="section-subtitle">
+            A quick look at my background, academics, and what drives me as a
+            developer.
+          </p>
         </div>
 
         <div className="about_container">
-          <div className="about_image_wrap">
+          <div className="about_image_wrap reveal">
             <div className="about_image_frame">
               <img src={ME} alt="Abdulrahman Ayman" />
             </div>
             <div className="about_image_border" />
           </div>
 
-          <div className="about_content">
+          <div className="about_content reveal">
             <div className="about_cards">
               <article className="about_card">
                 <span className="about_card_icon">
@@ -33,48 +36,35 @@ const About = () => {
                 <span className="about_card_val">4.93 / 5.0</span>
               </article>
 
-              {/* +7 Projects */}
               <article className="about_card">
                 <span className="about_card_icon">
                   <VscFolderLibrary />
                 </span>
                 <h5>Projects</h5>
-                <span className="about_card_val">+7</span>
+                <span className="about_card_val">7+</span>
               </article>
 
-              {/* <article className="about_card">
-                <span className="about_card_icon">
-                  <FiUsers />
-                </span>
-                <h5>Leadership</h5>
-                <span className="about_card_val">5+ Years</span>
-              </article> */}
               <article className="about_card">
                 <span className="about_card_icon">
-                  <VscFolderLibrary />
+                  <RiGraduationCapLine />
                 </span>
-                <h5>Projects</h5>
+                <h5>Focus</h5>
                 <span className="about_card_val">CS & AI</span>
               </article>
             </div>
 
             <p className="about_text">
-              I'm <strong>Abdulrahman Ayman</strong>, a Computer Science
-              graduate (GPA 4.93/5.00) with expertise in building modern,
-              responsive web applications using <strong>React.js</strong> and
-              integrating AI-powered features. Developed multiple real-world
-              projects including dashboards and AI-based platforms.
-              {/* Bringing{" "}
-              <strong>5 years of professional experience</strong> in fast-paced
-              business environments,  */}{" "}
-              with strong problem-solving, communication, and user-focused
-              development skills.
+              I'm <strong>Abdulrahman Ayman</strong> — a Computer Science
+              graduate with a 4.93/5.00 GPA and a focus on building modern,
+              responsive web applications. I work primarily with{" "}
+              <strong>React.js</strong> and the MERN stack, and I enjoy
+              integrating AI-powered features into real-world projects.
             </p>
             <p className="about_text">
-              My background allows me to build robust, user-friendly web
-              applications while understanding business objectives. Whether I'm
-              building AI-driven platforms or managing operational workflows, I
-              bring precision and effective communication.
+              I've built dashboards, AI learning platforms, and customer
+              support systems — always focusing on clean code, thoughtful UX,
+              and solving real problems. I bring strong problem-solving and
+              communication skills to every team I work with.
             </p>
 
             <div className="about_cta">

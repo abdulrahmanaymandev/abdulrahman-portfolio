@@ -2,9 +2,6 @@ import React from "react";
 import "./skills.css";
 import { FiMonitor, FiDatabase, FiCpu, FiTool } from "react-icons/fi";
 
-// • AI & Digital Solutions: OpenAI API, LangChain, Streamlit, CrewAI.
-// • Tools & Systems: Git, GitHub, Linux, Networking Fundamentals.
-
 const skillCategories = [
   {
     title: "Front-End Development",
@@ -45,16 +42,16 @@ function Skills() {
   return (
     <section id="skills">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <p className="section-tag">Tech Stack</p>
-          <h2 className="section-title">My Skills</h2>
+          <h2 className="section-title">Skills & Expertise</h2>
           <p className="section-subtitle">
-            A comprehensive overview of my technical expertise, categorized by
+            A comprehensive overview of my technical toolkit, organized by
             domain.
           </p>
         </div>
 
-        <div className="skills_grid">
+        <div className="skills_grid reveal-stagger">
           {skillCategories.map(({ title, icon, description, skills }, idx) => (
             <div key={idx} className="skill_category_card">
               <div className="skill_category_header">
