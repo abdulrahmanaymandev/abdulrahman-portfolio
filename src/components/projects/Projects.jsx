@@ -10,8 +10,19 @@ import { FaGithub } from "react-icons/fa6";
 import { RiExternalLinkLine } from "react-icons/ri";
 
 const projectsData = [
+
   {
     id: 1,
+    image: IMG2,
+    title: "Inkline Platform",
+    description:
+    "A modern full-stack blog application built with the MERN stack, offering seamless content creation, user authentication, and interactive features like comments, categories, and image uploads. Designed with scalability, performance, and clean UI/UX principles in mind.",
+    tags: ["MERN Stack", "MongoDB", "Express", "React"],
+    github: "https://inkline-project.netlify.app/",
+    demo: "https://github.com/abdulrahmanaymandev/blog-project",
+  },
+  {
+    id: 2,
     image: IMG1,
     title: "Cars Admin Dashboard",
     description:
@@ -26,9 +37,18 @@ const projectsData = [
       backgroundColor: "#0a0a0b",
     },
   },
-
+{
+    id: 3,
+    image: IMG3,
+    title: "PATHLY — AI Learning Platform",
+    description:
+      "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
+    tags: ["React", "OpenAI API", "LangChain", "FastAPI"],
+    github: "https://github.com/abdulrahmanaymandev",
+    demo: "https://github.com/abdulrahmanaymandev",
+  },
   {
-    id: 2,
+    id: 4,
     image: IMG4,
     title: "E-Commerce Web Application",
     description:
@@ -42,26 +62,8 @@ const projectsData = [
       backgroundColor: "#0a0a0b",
     },
   },
-  {
-    id: 3,
-    image: IMG3,
-    title: "PATHLY — AI Learning Platform",
-    description:
-      "AI-based personalized learning platform generating career pathways aligned with real-world job market demands.",
-    tags: ["React", "OpenAI API", "LangChain", "FastAPI"],
-    github: "https://github.com/abdulrahmanaymandev",
-    demo: "https://github.com/abdulrahmanaymandev",
-  },
-  {
-    id: 4,
-    image: IMG2,
-    title: "Blog Platform",
-    description:
-      "Full-stack blog platform with dynamic UI rendering and structured backend logic following scalable development practices.",
-    tags: ["MERN Stack", "MongoDB", "Express", "React"],
-    github: "https://github.com/abdulrahmanaymandev",
-    demo: "https://github.com/abdulrahmanaymandev",
-  },
+  
+  
 
   {
     id: 5,
