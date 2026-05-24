@@ -2,14 +2,16 @@ export async function handler(event) {
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
-      body: JSON.stringify({ success: false }),
+      body: JSON.stringify({ success: false, error: "Method Not Allowed" }),
     };
   }
 
   try {
-    const { name, email, message } = JSON.parse(event.body);
+    const { name, email, message } = JSON.parse(event.body || "{}");
 
-    const res = await fetch(
+    console.log("Incoming data:", { name, email, message });
+
+    const response = await fetch(
       "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
       {
         method: "POST",
@@ -21,16 +23,22 @@ export async function handler(event) {
       }
     );
 
-    const data = await res.json();
+    console.log("Status:", response.status);
+    console.log("OK:", response.ok);
+
+    const text = await response.text();
+    console.log("Raw response:", text);
 
     return {
       statusCode: 200,
       body: JSON.stringify({
         success: true,
-        data,
+        raw: text,
       }),
     };
   } catch (error) {
+    console.error("Function crashed:", error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({
