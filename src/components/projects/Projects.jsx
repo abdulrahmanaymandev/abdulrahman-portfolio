@@ -18,8 +18,8 @@ const projectsData = [
     description:
     "A modern full-stack blog application built with the MERN stack, offering seamless content creation, user authentication, and interactive features like comments, categories, and image uploads. Designed with scalability, performance, and clean UI/UX principles in mind.",
     tags: ["MERN Stack", "MongoDB", "Express", "React"],
-    github: "https://inkline-project.netlify.app/",
-    demo: "https://github.com/abdulrahmanaymandev/blog-project",
+    github:"https://github.com/abdulrahmanaymandev/blog-project",
+    demo: "https://inkline-project.netlify.app/",
   },
   {
     id: 2,
