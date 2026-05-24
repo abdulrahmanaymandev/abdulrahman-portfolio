@@ -1,3 +1,188 @@
+// import React, { useRef, useState } from "react";
+// import "./contact.css";
+// import { RiMailLine, RiWhatsappLine, RiSendPlaneLine } from "react-icons/ri";
+// import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
+
+// const contactCards = [
+//   {
+//     id: 1,
+//     icon: <RiMailLine />,
+//     title: "Email",
+//     value: "abdulrahman.ayman.dev@gmail.com",
+//     href: "mailto:abdulrahman.ayman.dev@gmail.com",
+//   },
+//   {
+//     id: 2,
+//     icon: <RiWhatsappLine />,
+//     title: "WhatsApp",
+//     value: "0554672215",
+//     href: "https://api.whatsapp.com/send?phone=966554672215",
+//   },
+//   {
+//     id: 3,
+//     icon: <FaLinkedinIn />,
+//     title: "LinkedIn",
+//     value: "Abdulrahman Ayman",
+//     href: "https://www.linkedin.com/in/abdulrahman-ayman-51a22235b",
+//   },
+//   {
+//     id: 4,
+//     icon: <FaGithub />,
+//     title: "GitHub",
+//     value: "abdulrahmanaymandev",
+//     href: "https://github.com/abdulrahmanaymandev",
+//   },
+// ];
+
+// function Contact() {
+//   const form = useRef();
+//   const [sendStatus, setSendStatus] = useState(null);
+
+//   const sendEmail = async (e) => {
+//     e.preventDefault();
+//     setSendStatus("sending");
+
+//     const formData = new FormData(form.current);
+
+//     try {
+//       const response = await fetch(
+//         "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
+//         {
+//           method: "POST",
+//           headers: { Accept: "application/json" },
+//           body: formData,
+//         },
+//       );
+//       const result = await response.json();
+
+//       if (result.success === "true" || result.success === true) {
+//         setSendStatus("success");
+//         form.current.reset();
+//         setTimeout(() => setSendStatus(null), 4000);
+//       } else {
+//         setSendStatus("error");
+//         setTimeout(() => setSendStatus(null), 4000);
+//       }
+//     } catch {
+//       setSendStatus("error");
+//       setTimeout(() => setSendStatus(null), 4000);
+//     }
+//   };
+
+//   return (
+//     <section id="contact">
+//       <div className="container">
+//         <div className="section-header reveal">
+//           <p className="section-tag">Get In Touch</p>
+//           <h2 className="section-title">Let's Work Together</h2>
+//           <p className="section-subtitle">
+//             Have a project or opportunity in mind? I'd love to hear from you.
+//           </p>
+//         </div>
+
+//         <div className="contact_wrapper">
+//           {/* Left Info */}
+//           <div className="contact_info reveal">
+//             <p className="contact_intro">
+//               I'm currently available for Co-op training, internships,
+//               freelance projects, and full-time opportunities. Reach out
+//               through any of the channels below.
+//             </p>
+
+//             {contactCards.map(({ id, icon, title, value, href }) => (
+//               <a
+//                 key={id}
+//                 href={href}
+//                 target="_blank"
+//                 rel="noreferrer"
+//                 className="contact_card"
+//               >
+//                 <div className="contact_card_icon">{icon}</div>
+//                 <div className="contact_card_body">
+//                   <h4>{title}</h4>
+//                   <p>{value}</p>
+//                 </div>
+//               </a>
+//             ))}
+//           </div>
+
+//           {/* Right Form */}
+//           <div className="contact_form_wrap reveal">
+//             <h3 className="contact_form_title">Send a Message</h3>
+//             <p className="contact_form_sub">
+//               Fill out the form and I'll get back to you shortly.
+//             </p>
+
+//             <form ref={form} onSubmit={sendEmail} className="contact_form">
+//               <input type="hidden" name="_captcha" value="false" />
+//               <input type="hidden" name="_template" value="table" />
+
+//               <div className="form_row">
+//                 <div className="form_group">
+//                   <label htmlFor="contact_name">Full Name</label>
+//                   <input
+//                     id="contact_name"
+//                     type="text"
+//                     name="name"
+//                     placeholder="Your name"
+//                     required
+//                   />
+//                 </div>
+//                 <div className="form_group">
+//                   <label htmlFor="contact_email">Email Address</label>
+//                   <input
+//                     id="contact_email"
+//                     type="email"
+//                     name="email"
+//                     placeholder="you@example.com"
+//                     required
+//                   />
+//                 </div>
+//               </div>
+
+//               <div className="form_group">
+//                 <label htmlFor="contact_message">Message</label>
+//                 <textarea
+//                   id="contact_message"
+//                   name="message"
+//                   placeholder="Tell me about your project or opportunity..."
+//                   rows={6}
+//                   required
+//                 />
+//               </div>
+
+//               {sendStatus === "success" && (
+//                 <p className="form_status success">
+//                   ✓ Message sent successfully! I'll be in touch soon.
+//                 </p>
+//               )}
+//               {sendStatus === "error" && (
+//                 <p className="form_status error">
+//                   Something went wrong. Please try again.
+//                 </p>
+//               )}
+
+//               <button
+//                 type="submit"
+//                 className="btn_submit"
+//                 disabled={sendStatus === "sending"}
+//               >
+//                 <span>
+//                   <RiSendPlaneLine />
+//                   {sendStatus === "sending" ? " Sending..." : " Send Message"}
+//                 </span>
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Contact;
+
+
 import React, { useRef, useState } from "react";
 import "./contact.css";
 import { RiMailLine, RiWhatsappLine, RiSendPlaneLine } from "react-icons/ri";
@@ -36,79 +221,47 @@ const contactCards = [
 
 function Contact() {
   const form = useRef();
-  const [sendStatus, setSendStatus] = useState(null);
-
-  // const sendEmail = async (e) => {
-  //   e.preventDefault();
-  //   setSendStatus("sending");
-
-  //   const formData = new FormData(form.current);
-
-  //   try {
-  //     const response = await fetch(
-  //       "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
-  //       {
-  //         method: "POST",
-  //         headers: { Accept: "application/json" },
-  //         body: formData,
-  //       },
-  //     );
-  //     const result = await response.json();
-
-  //     if (result.success === "true" || result.success === true) {
-  //       setSendStatus("success");
-  //       form.current.reset();
-  //       setTimeout(() => setSendStatus(null), 4000);
-  //     } else {
-  //       setSendStatus("error");
-  //       setTimeout(() => setSendStatus(null), 4000);
-  //     }
-  //   } catch {
-  //     setSendStatus("error");
-  //     setTimeout(() => setSendStatus(null), 4000);
-  //   }
-  // };
+  const [sendStatus, setSendStatus] = useState("idle");
 
   const sendEmail = async (e) => {
-  e.preventDefault();
-  setSendStatus("sending");
+    e.preventDefault();
 
-  const formData = new FormData(form.current);
+    if (sendStatus === "sending") return;
 
-  const data = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
-  };
+    setSendStatus("sending");
 
-  try {
-    const response = await fetch(
-      "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
-      {
+    const formData = new FormData(form.current);
+
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSendStatus("success");
+        form.current.reset();
+      } else {
+        setSendStatus("error");
       }
-    );
-
-    const result = await response.json();
-
-    if (result.success) {
-      setSendStatus("success");
-      form.current.reset();
-    } else {
+    } catch (err) {
+      console.error("Send error:", err);
       setSendStatus("error");
     }
-  } catch (err) {
-    console.log(err);
-    setSendStatus("error");
-  }
 
-  setTimeout(() => setSendStatus(null), 4000);
-};
+    setTimeout(() => setSendStatus("idle"), 4000);
+  };
 
   return (
     <section id="contact">
@@ -122,12 +275,11 @@ function Contact() {
         </div>
 
         <div className="contact_wrapper">
-          {/* Left Info */}
+          {/* LEFT SIDE */}
           <div className="contact_info reveal">
             <p className="contact_intro">
-              I'm currently available for Co-op training, internships,
-              freelance projects, and full-time opportunities. Reach out
-              through any of the channels below.
+              I'm currently available for Co-op training, internships, freelance projects,
+              and full-time opportunities.
             </p>
 
             {contactCards.map(({ id, icon, title, value, href }) => (
@@ -147,7 +299,7 @@ function Contact() {
             ))}
           </div>
 
-          {/* Right Form */}
+          {/* RIGHT SIDE FORM */}
           <div className="contact_form_wrap reveal">
             <h3 className="contact_form_title">Send a Message</h3>
             <p className="contact_form_sub">
@@ -155,24 +307,20 @@ function Contact() {
             </p>
 
             <form ref={form} onSubmit={sendEmail} className="contact_form">
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-
               <div className="form_row">
                 <div className="form_group">
-                  <label htmlFor="contact_name">Full Name</label>
+                  <label>Full Name</label>
                   <input
-                    id="contact_name"
                     type="text"
                     name="name"
                     placeholder="Your name"
                     required
                   />
                 </div>
+
                 <div className="form_group">
-                  <label htmlFor="contact_email">Email Address</label>
+                  <label>Email Address</label>
                   <input
-                    id="contact_email"
                     type="email"
                     name="email"
                     placeholder="you@example.com"
@@ -182,24 +330,25 @@ function Contact() {
               </div>
 
               <div className="form_group">
-                <label htmlFor="contact_message">Message</label>
+                <label>Message</label>
                 <textarea
-                  id="contact_message"
                   name="message"
-                  placeholder="Tell me about your project or opportunity..."
                   rows={6}
+                  placeholder="Tell me about your project..."
                   required
                 />
               </div>
 
+              {/* STATUS */}
               {sendStatus === "success" && (
                 <p className="form_status success">
-                  ✓ Message sent successfully! I'll be in touch soon.
+                  ✓ Message sent successfully!
                 </p>
               )}
+
               {sendStatus === "error" && (
                 <p className="form_status error">
-                  Something went wrong. Please try again.
+                  ✗ Failed to send message. Try again.
                 </p>
               )}
 
