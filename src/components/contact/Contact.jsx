@@ -38,36 +38,77 @@ function Contact() {
   const form = useRef();
   const [sendStatus, setSendStatus] = useState(null);
 
+  // const sendEmail = async (e) => {
+  //   e.preventDefault();
+  //   setSendStatus("sending");
+
+  //   const formData = new FormData(form.current);
+
+  //   try {
+  //     const response = await fetch(
+  //       "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
+  //       {
+  //         method: "POST",
+  //         headers: { Accept: "application/json" },
+  //         body: formData,
+  //       },
+  //     );
+  //     const result = await response.json();
+
+  //     if (result.success === "true" || result.success === true) {
+  //       setSendStatus("success");
+  //       form.current.reset();
+  //       setTimeout(() => setSendStatus(null), 4000);
+  //     } else {
+  //       setSendStatus("error");
+  //       setTimeout(() => setSendStatus(null), 4000);
+  //     }
+  //   } catch {
+  //     setSendStatus("error");
+  //     setTimeout(() => setSendStatus(null), 4000);
+  //   }
+  // };
+
   const sendEmail = async (e) => {
-    e.preventDefault();
-    setSendStatus("sending");
+  e.preventDefault();
+  setSendStatus("sending");
 
-    const formData = new FormData(form.current);
+  const formData = new FormData(form.current);
 
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
-        {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: formData,
-        },
-      );
-      const result = await response.json();
-
-      if (result.success === "true" || result.success === true) {
-        setSendStatus("success");
-        form.current.reset();
-        setTimeout(() => setSendStatus(null), 4000);
-      } else {
-        setSendStatus("error");
-        setTimeout(() => setSendStatus(null), 4000);
-      }
-    } catch {
-      setSendStatus("error");
-      setTimeout(() => setSendStatus(null), 4000);
-    }
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
   };
+
+  try {
+    const response = await fetch(
+      "https://formsubmit.co/ajax/abdulrahman.ayman.dev@gmail.com",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSendStatus("success");
+      form.current.reset();
+    } else {
+      setSendStatus("error");
+    }
+  } catch (err) {
+    console.log(err);
+    setSendStatus("error");
+  }
+
+  setTimeout(() => setSendStatus(null), 4000);
+};
 
   return (
     <section id="contact">
