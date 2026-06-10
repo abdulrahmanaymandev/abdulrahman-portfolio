@@ -13,6 +13,7 @@ import {
   RiArrowDropDownLine,
   RiDownloadCloud2Line,
   RiBriefcaseLine,
+  RiAwardLine,
 } from "react-icons/ri";
 
 const navLinks = [
@@ -29,6 +30,12 @@ const navLinks = [
     icon: <RiCodeSSlashLine />,
     id: "skills",
     label: "Skills",
+  },
+  {
+    href: "#certifications",
+    icon: <RiAwardLine />,
+    id: "certifications",
+    label: "Certifications",
   },
   {
     href: "#experience",
@@ -57,7 +64,14 @@ function Nav() {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["about", "projects", "skills", "experience", "contact"];
+    const sectionIds = [
+      "about",
+      "projects",
+      "skills",
+      "certifications",
+      "experience",
+      "contact",
+    ];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

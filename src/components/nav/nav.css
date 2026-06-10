@@ -268,7 +268,7 @@ nav.scrolled {
 /* =========================================
    RESPONSIVE
    ========================================= */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   nav { padding: 0 5%; }
 
   .nav-links {
