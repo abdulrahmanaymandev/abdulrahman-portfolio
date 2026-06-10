@@ -49,23 +49,31 @@ const About = () => {
                   <RiGraduationCapLine />
                 </span>
                 <h5>Focus</h5>
-                <span className="about_card_val">CS & AI</span>
+                <span className="about_card_val">Full Stack & AI</span>
               </article>
             </div>
 
             <p className="about_text">
-              I'm <strong>Abdulrahman Ayman</strong> — a Computer Science
-              graduate (GPA 4.93/5.00) with hands-on experience in building scalable
-              full-stack web applications and AI-powered systems. I work primarily
-              with React.js, Node.js, and REST APIs, and I have a strong focus on
-              building data-driven platforms.
+              I'm <strong>Abdulrahman Ayman</strong>, a Computer Science
+              graduate <strong>GPA 4.93/5.00</strong>
+              with a strong foundation in software engineering and hands-on
+              experience developing full-stack web applications and AI-powered
+              systems. My experience spans modern web technologies including
+              <strong> Laravel,</strong> <strong>React.js,</strong>{" "}
+              <strong>Node.js,</strong> <strong>REST APIs,</strong> and{" "}
+              <strong>database design.</strong> I enjoy building scalable,
+              user-centered applications that solve real-world problems while
+              maintaining clean architecture and high performance.
             </p>
             <p className="about_text">
-              I've developed multiple real-world projects, including an AI-driven
-              learning platform (PATHLY) that generates personalized learning
-              paths based on job market data, as well as full-stack blog platforms
-              and admin dashboards. I bring strong problem-solving and
-              communication skills to every team I work with.
+              Throughout my projects, I have developed solutions ranging from
+              AI-driven learning platforms and content management systems to
+              business dashboards and productivity tools. These experiences have
+              strengthened my problem-solving abilities, technical adaptability,
+              and commitment to continuous learning. I am currently seeking
+              opportunities where I can contribute as a Software Engineer while
+              continuing to grow, collaborate, and create impactful technology
+              solutions.
             </p>
 
             <div className="about_cta">

@@ -21,14 +21,25 @@ function Home() {
           <h1 className="hero_name">
             Abdulrahman <span className="name_accent">Ayman</span>
           </h1>
-
-          <p className="hero_title_line">Full Stack Developer (MERN)</p>
+          <hr
+            style={{
+              width: "100%",
+              marginTop: "0.5rem",
+              marginBottom: "1.5rem",
+              borderColor: "var(--accent)",
+              opacity: 0.5,
+            }}
+          />
+          <p className="hero_title_line">Full Stack Developer</p>
+          <p className="hero_subtitle_line">Laravel and MERN</p>
 
           <p className="hero_description">
-            I build <strong>scalable, data-driven</strong> web applications and
-            AI-powered systems. CS graduate specializing in React.js, Node.js,
-            and integrating AI workflows — turning complex problems into
-            clean, elegant interfaces.
+            I design and develop scalable full-stack applications using{" "}
+            <strong>Laravel,</strong>
+            <strong> React.js,</strong> and <strong> Node.js,</strong> with a
+            growing focus on AI-powered solutions. My goal is to build software
+            that delivers real value through performance, usability, and clean
+            architecture.
           </p>
 
           <div className="cta">

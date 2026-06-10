@@ -6,7 +6,7 @@ const experienceData = [
     id: 1,
     company: "Alkhedrcars Company",
     role: "Sales Consultant → Marketing Specialist → Showroom Manager",
-    date: "2021 – 2026",
+    date: "5 Years (May 2021 – May 2026) ",
     details: [
       "Led showroom operations in a high-volume environment, developing strong problem-solving and decision-making skills applicable to software development.",
       "Analyzed customer behavior and needs, strengthening ability to design user-centered digital solutions.",
@@ -28,8 +28,8 @@ const experienceData = [
 
 function Experience() {
   return (
-      <section id="experience">
-        <div className="container">
+    <section id="experience">
+      <div className="container">
         <div className="section-header reveal">
           <p className="section-tag">My Journey</p>
           <h2 className="section-title">Experience</h2>

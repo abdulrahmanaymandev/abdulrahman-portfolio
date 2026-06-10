@@ -107,7 +107,7 @@ header::after {
 
 .hero_name {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  font-size: clamp(2.8rem, 5.5vw, 3.7rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.04em;
@@ -122,11 +122,21 @@ header::after {
 
 .hero_title_line {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
-  font-weight: 300;
+  font-size: clamp(2.6rem, 5.5vw, 3.9rem);
+  font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.04em;
-  color: var(--text-tertiary);
+  color: var(--text-primary);
+}
+
+.hero_subtitle_line {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 5.5vw, 3.2rem);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--accent);
   margin-bottom: 2rem;
 }
 
