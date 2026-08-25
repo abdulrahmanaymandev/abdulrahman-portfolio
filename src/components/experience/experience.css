@@ -47,6 +47,46 @@
   opacity: 1;
 }
 
+.experience_card.has_credential .experience_card_layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  grid-template-areas: "copy credential";
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.experience_card.has_credential .experience_card_copy {
+  grid-area: copy;
+}
+
+.experience_credential_column {
+  grid-area: credential;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.experience_credential_column .exp_date {
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+.experience_credential_thumbnail {
+  align-self: start;
+  margin-top: 2.5rem;
+}
+
+.certificate_thumbnail.experience_credential_thumbnail img {
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+}
+
+.certificate_thumbnail.experience_pdf_thumbnail img {
+  object-position: top center;
+}
+
 .exp_header {
   display: flex;
   justify-content: space-between;
@@ -117,6 +157,30 @@
    RESPONSIVE
    ========================================= */
 @media (max-width: 600px) {
+  .experience_card.has_credential .experience_card_layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "date"
+      "copy"
+      "preview";
+  }
+
+  .experience_credential_column {
+    display: contents;
+  }
+
+  .experience_credential_column .exp_date {
+    grid-area: date;
+    justify-self: end;
+  }
+
+  .experience_credential_thumbnail {
+    grid-area: preview;
+    width: 100%;
+    max-width: 360px;
+    margin-top: 0;
+  }
+
   .exp_header {
     flex-direction: column;
     align-items: flex-start;
