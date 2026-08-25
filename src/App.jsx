@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
+import Education from "./components/education/Education";
 import Certifications from "./components/certifications/Certifications";
 import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
@@ -32,10 +33,11 @@ function App() {
       <Nav />
       <Home />
       <About />
+      <Experience />
       <Projects />
       <Skills />
+      <Education />
       <Certifications />
-      <Experience />
       <Contact />
       <Footer />
     </>

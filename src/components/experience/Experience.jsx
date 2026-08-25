@@ -4,24 +4,35 @@ import "./experience.css";
 const experienceData = [
   {
     id: 1,
-    company: "Alkhedrcars Company",
-    role: "Sales Consultant → Marketing Specialist → Showroom Manager",
-    date: "5 Years (May 2021 – May 2026) ",
+    company: "Zaiti for Car Services",
+    role: "Full Stack Web Developer Intern",
+    date: "Jun 2026 – Aug 2026",
     details: [
-      "Led showroom operations in a high-volume environment, developing strong problem-solving and decision-making skills applicable to software development.",
-      "Analyzed customer behavior and needs, strengthening ability to design user-centered digital solutions.",
-      "Worked under pressure with targets, improving efficiency and execution speed.",
+      "Built a full-stack Support Ticket System from requirements and database design through development, testing, and deployment.",
+      "Contributed to Zaiti's customer dashboard by developing and improving features across Invoices, Wallet, Coupons, Rewards, Roulette, and Support Tickets.",
+      "Worked on API integration, responsive user experiences, testing, debugging, and resolving issues across different features.",
     ],
   },
   {
     id: 2,
     company: "Qassim Tech (QT)",
-    role: "Software Engineering Trainee",
-    date: "8 Weeks (Training)",
+    role: "AI Systems & Agents Program",
+    date: "Jun 2025 – Aug 2025",
     details: [
-      "Participated in a team-based technical training focused on AI Agents and system workflows.",
-      "Contributed to building an AI-powered customer support system using Streamlit.",
-      "Worked on a multi-agent academic platform, including scheduling and notification features.",
+      "Participated in a team-based technical program focused on AI agents, multi-agent systems, and automated workflows.",
+      "Contributed to an AI-powered customer support system designed to automate and improve customer interactions.",
+      "Worked on a multi-agent academic platform with task notifications, attendance tracking, reporting, and meeting scheduling.",
+    ],
+  },
+  {
+    id: 3,
+    company: "Alkhedr Cars Company",
+    role: "Sales Consultant → Marketing Specialist → Showroom Manager",
+    date: "May 2021 – May 2026",
+    details: [
+      "Progressed across sales, marketing, and showroom management roles over five years.",
+      "Managed day-to-day showroom operations, customer relationships, and team coordination.",
+      "Built practical experience in communication, problem-solving, decision-making, and business operations while pursuing my Computer Science degree.",
     ],
   },
 ];

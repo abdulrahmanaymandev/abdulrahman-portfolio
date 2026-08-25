@@ -84,9 +84,9 @@ function Contact() {
           {/* Left Info */}
           <div className="contact_info reveal">
             <p className="contact_intro">
-              I'm currently available for Co-op training, internships,
-              freelance projects, and full-time opportunities. Reach out
-              through any of the channels below.
+              I'm currently open to Software Engineering and Full-Stack
+              Development opportunities. Feel free to reach out about a role,
+              project, or collaboration.
             </p>
 
             {contactCards.map(({ id, icon, title, value, href }) => (

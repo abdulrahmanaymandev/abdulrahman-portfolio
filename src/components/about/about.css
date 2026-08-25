@@ -104,6 +104,15 @@
   display: block;
 }
 
+.about_card_meta {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
 /* Text */
 .about_text {
   font-size: 0.95rem;

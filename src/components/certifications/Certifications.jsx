@@ -56,8 +56,8 @@ function Certifications() {
           <p className="section-tag">Credentials</p>
           <h2 className="section-title">Certifications</h2>
           <p className="section-subtitle">
-            Professional certificates and learning milestones that support my
-            software engineering journey.
+            Professional certifications and continuous learning in software
+            development.
           </p>
         </div>
 

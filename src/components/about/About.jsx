@@ -13,7 +13,7 @@ const About = () => {
           <p className="section-tag">Who I Am</p>
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
-            A quick look at my background, academics, and what drives me as a
+            A quick look at my background, experience, and what drives me as a
             developer.
           </p>
         </div>
@@ -33,15 +33,17 @@ const About = () => {
                   <FaAward />
                 </span>
                 <h5>Academics</h5>
-                <span className="about_card_val">4.93 / 5.0</span>
+                <span className="about_card_val">4.93 / 5.00</span>
+                <span className="about_card_meta">GPA</span>
               </article>
 
               <article className="about_card">
                 <span className="about_card_icon">
                   <VscFolderLibrary />
                 </span>
-                <h5>Projects</h5>
-                <span className="about_card_val">7+</span>
+                <h5>Experience</h5>
+                <span className="about_card_val">Real-World</span>
+                <span className="about_card_meta">Projects</span>
               </article>
 
               <article className="about_card">
@@ -49,31 +51,29 @@ const About = () => {
                   <RiGraduationCapLine />
                 </span>
                 <h5>Focus</h5>
-                <span className="about_card_val">Full Stack & AI</span>
+                <span className="about_card_val">Software</span>
+                <span className="about_card_meta">Engineering</span>
               </article>
             </div>
 
             <p className="about_text">
-              I'm <strong>Abdulrahman Ayman</strong>, a Computer Science
-              graduate <strong>GPA 4.93/5.00</strong>
-              with a strong foundation in software engineering and hands-on
-              experience developing full-stack web applications and AI-powered
-              systems. My experience spans modern web technologies including
-              <strong> Laravel,</strong> <strong>React.js,</strong>{" "}
-              <strong>Node.js,</strong> <strong>REST APIs,</strong> and{" "}
-              <strong>database design.</strong> I enjoy building scalable,
-              user-centered applications that solve real-world problems while
-              maintaining clean architecture and high performance.
+              I'm Abdulrahman Ayman, a Computer Science graduate with a
+              4.93/5.00 GPA and hands-on experience building full-stack web
+              applications and contributing to real-world software products.
             </p>
             <p className="about_text">
-              Throughout my projects, I have developed solutions ranging from
-              AI-driven learning platforms and content management systems to
-              business dashboards and productivity tools. These experiences have
-              strengthened my problem-solving abilities, technical adaptability,
-              and commitment to continuous learning. I am currently seeking
-              opportunities where I can contribute as a Software Engineer while
-              continuing to grow, collaborate, and create impactful technology
-              solutions.
+              My experience includes REST APIs, backend development,
+              database-driven applications, real-time features, authentication,
+              testing, and CI/CD. I've worked with technologies including NestJS,
+              Next.js, TypeScript, PostgreSQL, and WebSockets, taking features
+              from requirements and development through testing and deployment.
+            </p>
+            <p className="about_text">
+              Alongside my Computer Science studies, I spent several years
+              working in the automotive industry across sales, marketing, and
+              operations. Balancing professional work with studying and building
+              software gave me practical experience in solving real business
+              problems and shaped the way I approach software development today.
             </p>
 
             <div className="about_cta">
