@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 import ME from "../../assets/Abdulrahman.webp";
-import CV from "../../assets/Abdulrahman_Ayman_CV.pdf";
+import { RESUME_PATH } from "../../portfolioConfig";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { RiDownloadLine, RiArrowRightLine } from "react-icons/ri";
 
@@ -30,39 +30,37 @@ function Home() {
               opacity: 0.5,
             }}
           />
-          <p className="hero_title_line">Full Stack Developer</p>
-          <p className="hero_subtitle_line">Laravel and MERN</p>
+          <p className="hero_title_line">Software Engineer</p>
+          <p className="hero_subtitle_line">Full-Stack Developer</p>
 
           <p className="hero_description">
-            I design and develop scalable full-stack applications using{" "}
-            <strong>Laravel,</strong>
-            <strong> React.js,</strong> and <strong> Node.js,</strong> with a
-            growing focus on AI-powered solutions. My goal is to build software
-            that delivers real value through performance, usability, and clean
-            architecture.
+            Software Engineer with hands-on experience building full-stack web
+            applications, REST APIs, real-time systems, and database-driven
+            solutions. Focused on building reliable, scalable software that
+            solves real-world problems.
           </p>
 
           <div className="cta">
             <a href="#contact" className="btn btn-primary">
               <RiArrowRightLine /> Let's Talk
             </a>
-            <a href={CV} download className="btn">
+            <a href={RESUME_PATH} download className="btn">
               <RiDownloadLine /> Download CV
             </a>
           </div>
 
           <div className="hero_stats">
             <div className="hero_stat">
-              <span className="hero_stat_value">4.93</span>
-              <span className="hero_stat_label">GPA / 5.00</span>
+              <span className="hero_stat_value">4.93 / 5.00</span>
+              <span className="hero_stat_label">GPA</span>
             </div>
             <div className="hero_stat">
               <span className="hero_stat_value">7+</span>
-              <span className="hero_stat_label">Projects</span>
+              <span className="hero_stat_label">Featured Projects</span>
             </div>
             <div className="hero_stat">
               <span className="hero_stat_value">2026</span>
-              <span className="hero_stat_label">Grad Year</span>
+              <span className="hero_stat_label">Graduation Year</span>
             </div>
           </div>
         </div>
@@ -90,7 +88,7 @@ function Home() {
 
           <div className="hero_image_wrap">
             <div className="hero_image_frame">
-              <img src={ME} alt="Abdulrahman Ayman — Full Stack Developer" />
+              <img src={ME} alt="Abdulrahman Ayman — Software Engineer" />
             </div>
             <div className="hero_badge hero_badge_1">
               <p className="badge_label">Available for work</p>

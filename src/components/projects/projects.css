@@ -152,6 +152,13 @@
   flex: 1;
 }
 
+.project_body .project_context {
+  flex: 0;
+  margin-top: 0.85rem;
+  color: var(--text-faint);
+  font-size: 0.76rem;
+}
+
 /* =========================================
    RESPONSIVE
    ========================================= */

@@ -1,0 +1,79 @@
+/* =========================================
+   EDUCATION
+   ========================================= */
+#education {
+  border-top: 1px solid var(--border);
+}
+
+.education_card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration) var(--ease-out);
+}
+
+.education_card:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.education_icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-muted);
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.education_details h3 {
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+  font-size: 1.45rem;
+}
+
+.education_university {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.education_meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.education_meta span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-muted);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 600px) {
+  .education_card {
+    padding: 2rem 1.5rem;
+  }
+
+  .education_details h3 {
+    font-size: 1.2rem;
+  }
+}

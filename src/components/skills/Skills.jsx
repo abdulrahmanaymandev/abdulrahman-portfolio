@@ -4,12 +4,31 @@ import { FiMonitor, FiDatabase, FiCpu, FiTool } from "react-icons/fi";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Backend Development",
+    icon: <FiCpu />,
+    description:
+      "Building backend systems, REST APIs, authentication, and real-time features.",
+    skills: [
+      "NestJS",
+      "Node.js",
+      "Express.js",
+      "Laravel",
+      "PHP",
+      "FastAPI",
+      "REST APIs",
+      "JWT",
+      "WebSockets",
+    ],
+  },
+  {
+    title: "Frontend Development",
     icon: <FiMonitor />,
-    description: "Building responsive and interactive user interfaces.",
+    description:
+      "Building responsive and integrated web interfaces for full-stack applications.",
     skills: [
       "React.js",
       "Next.js",
+      "TypeScript",
       "JavaScript",
       "HTML5",
       "CSS3",
@@ -17,38 +36,29 @@ const skillCategories = [
     ],
   },
   {
-    title: "Backend",
-    icon: <FiCpu />,
-    description: "Developing robust server-side logic and REST APIs.",
-    skills: [
-      "Laravel",
-      "PHP",
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "Python",
-      "Django",
-    ],
-  },
-  {
-    title: "Databases",
+    title: "Databases & DevOps",
     icon: <FiDatabase />,
-    description: "Structuring and managing application data.",
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "SQL"],
+    description:
+      "Working with relational and NoSQL databases, development workflows, and deployment tools.",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "SQL",
+      "Git / GitHub",
+      "Docker",
+      "Linux",
+      "CI/CD",
+      "Swagger/OpenAPI",
+      "Postman",
+    ],
   },
   {
     title: "AI & Tools",
     icon: <FiTool />,
-    description: "Implementing AI features and utilizing developer tools.",
-    skills: [
-      "OpenAI API",
-      "LangChain",
-      "Streamlit",
-      "CrewAI",
-      "Git",
-      "GitHub",
-      "Linux",
-    ],
+    description:
+      "Building and integrating AI-powered features into software applications.",
+    skills: ["OpenAI API", "LangChain", "CrewAI", "Streamlit"],
   },
 ];
 

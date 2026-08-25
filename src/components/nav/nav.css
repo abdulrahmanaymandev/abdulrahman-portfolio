@@ -105,144 +105,10 @@ nav.scrolled {
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* CV Dropdown */
-.cv-dropdown {
-  position: relative;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-.cv-dropdown .nav-cta {
+.nav-resume {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-}
-
-.dropdown-icon {
-  font-size: 1.1rem;
-  transition: transform 0.3s var(--ease-out);
-}
-
-.dropdown-icon.open {
-  transform: rotate(180deg);
-}
-
-.cv-menu {
-  position: absolute;
-  top: calc(100% + 0.75rem);
-  right: 0;
-  width: 260px;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  background: var(--bg-elevated);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-hover);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-8px) scale(0.98);
-  transform-origin: top right;
-  transition: all 0.25s var(--ease-out);
-  pointer-events: none;
-}
-
-.cv-menu.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-.cv-menu::before {
-  content: "";
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  right: 0;
-  height: 1rem;
-  background: transparent;
-}
-
-.cv-menu-header {
-  padding: 0.5rem 0.75rem 0.35rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-faint);
-}
-
-.cv-menu a {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.7rem 0.75rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  background: transparent;
-}
-
-.cv-menu a:hover {
-  background: var(--accent-subtle);
-}
-
-.cv-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  background: var(--accent-muted);
-  color: var(--accent);
-  font-size: 1rem;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-
-.cv-menu a:hover .cv-icon-wrapper {
-  background: var(--accent);
-  color: var(--bg-primary);
-}
-
-.cv-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  flex-grow: 1;
-}
-
-.cv-title {
-  color: var(--text-primary);
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.cv-menu a:hover .cv-title {
-  color: var(--accent);
-}
-
-.cv-desc {
-  color: var(--text-tertiary);
-  font-size: 0.72rem;
-}
-
-.download-icon {
-  color: transparent;
-  font-size: 1rem;
-  transition: all 0.25s ease;
-  transform: translateX(-6px);
-}
-
-.cv-menu a:hover .download-icon {
-  color: var(--accent);
-  transform: translateX(0);
+  gap: 0.4rem;
 }
 
 /* Hamburger */
@@ -288,7 +154,7 @@ nav.scrolled {
 
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
-  .cv-dropdown { display: none; }
+  .nav-resume { display: none; }
 }
 
 @media (max-width: 600px) {

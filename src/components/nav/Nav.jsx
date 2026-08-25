@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
-import CV1 from "../../assets/Abdulrahman_Ayman_CV.pdf";
-import CV2 from "../../assets/Abdulrahman_Ayman_T_CV.pdf";
+import { RESUME_PATH } from "../../portfolioConfig";
 
 import {
   RiHome5Line,
@@ -9,16 +8,21 @@ import {
   RiLayoutGridLine,
   RiCodeSSlashLine,
   RiMailSendLine,
-  RiFileTextLine,
-  RiArrowDropDownLine,
   RiDownloadCloud2Line,
   RiBriefcaseLine,
   RiAwardLine,
+  RiGraduationCapLine,
 } from "react-icons/ri";
 
 const navLinks = [
   { href: "#", icon: <RiHome5Line />, id: "header", label: "Home" },
   { href: "#about", icon: <RiUser3Line />, id: "about", label: "About" },
+  {
+    href: "#experience",
+    icon: <RiBriefcaseLine />,
+    id: "experience",
+    label: "Experience",
+  },
   {
     href: "#projects",
     icon: <RiLayoutGridLine />,
@@ -32,16 +36,16 @@ const navLinks = [
     label: "Skills",
   },
   {
+    href: "#education",
+    icon: <RiGraduationCapLine />,
+    id: "education",
+    label: "Education",
+  },
+  {
     href: "#certifications",
     icon: <RiAwardLine />,
     id: "certifications",
     label: "Certifications",
-  },
-  {
-    href: "#experience",
-    icon: <RiBriefcaseLine />,
-    id: "experience",
-    label: "Experience",
   },
   {
     href: "#contact",
@@ -54,7 +58,6 @@ const navLinks = [
 function Nav() {
   const [activeNav, setActiveNav] = useState("#");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [cvMenuOpen, setCvMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -66,10 +69,11 @@ function Nav() {
   useEffect(() => {
     const sectionIds = [
       "about",
+      "experience",
       "projects",
       "skills",
+      "education",
       "certifications",
-      "experience",
       "contact",
     ];
     const observer = new IntersectionObserver(
@@ -129,45 +133,14 @@ function Nav() {
         ))}
       </div>
 
-      <div
-        className="cv-dropdown"
-        onMouseEnter={() => setCvMenuOpen(true)}
-        onMouseLeave={() => setCvMenuOpen(false)}
-        onClick={() => setCvMenuOpen(!cvMenuOpen)}
+      <a
+        className="nav-cta nav-resume"
+        href={RESUME_PATH}
+        download
+        aria-label="Download resume"
       >
-        <button className="nav-cta" aria-label="Download CV">
-          Resume{" "}
-          <RiArrowDropDownLine
-            className={`dropdown-icon ${cvMenuOpen ? "open" : ""}`}
-          />
-        </button>
-
-        <div className={`cv-menu ${cvMenuOpen ? "open" : ""}`}>
-          <div className="cv-menu-header">
-            <span>Select Resume</span>
-          </div>
-          <a href={CV1} download onClick={(e) => e.stopPropagation()}>
-            <div className="cv-icon-wrapper">
-              <RiFileTextLine />
-            </div>
-            <div className="cv-info">
-              <span className="cv-title">Full-Time CV</span>
-              <span className="cv-desc">Standard professional resume</span>
-            </div>
-            <RiDownloadCloud2Line className="download-icon" />
-          </a>
-          <a href={CV2} download onClick={(e) => e.stopPropagation()}>
-            <div className="cv-icon-wrapper">
-              <RiFileTextLine />
-            </div>
-            <div className="cv-info">
-              <span className="cv-title">Internship CV</span>
-              <span className="cv-desc">Academic & entry-level roles</span>
-            </div>
-            <RiDownloadCloud2Line className="download-icon" />
-          </a>
-        </div>
-      </div>
+        Resume <RiDownloadCloud2Line />
+      </a>
 
       <button
         className="nav-toggle"
