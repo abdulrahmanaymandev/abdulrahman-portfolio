@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./certifications.css";
 import certificateImage from "../../assets/meta-front-end-certificate.PNG";
 import {
+  CredentialModal,
+  CredentialThumbnail,
+} from "../credential/CredentialPreview";
+import {
   RiAwardLine,
-  RiCloseLine,
   RiExternalLinkLine,
   RiImageLine,
   RiShieldCheckLine,
@@ -30,24 +33,6 @@ const certificationsData = [
 
 function Certifications() {
   const [previewCertificate, setPreviewCertificate] = useState(null);
-
-  useEffect(() => {
-    document.body.classList.toggle(
-      "modal-open",
-      Boolean(previewCertificate),
-    );
-
-    const handleEscape = (event) => {
-      if (event.key === "Escape") setPreviewCertificate(null);
-    };
-
-    window.addEventListener("keydown", handleEscape);
-
-    return () => {
-      document.body.classList.remove("modal-open");
-      window.removeEventListener("keydown", handleEscape);
-    };
-  }, [previewCertificate]);
 
   return (
     <section id="certifications">
@@ -103,21 +88,13 @@ function Certifications() {
                   </div>
 
                   {certificate.image && (
-                    <button
-                      type="button"
-                      className="certificate_thumbnail"
-                      onClick={() => setPreviewCertificate(certificate)}
-                      aria-label={`Preview ${certificate.title}`}
-                    >
-                      <img
-                        src={certificate.image}
-                        alt={`${certificate.title} preview`}
-                      />
-                      <span>
-                        <RiImageLine />
-                        Preview
-                      </span>
-                    </button>
+                    <CredentialThumbnail
+                      source={certificate.image}
+                      title={certificate.title}
+                      altText={`${certificate.title} preview`}
+                      className="meta_certificate_thumbnail"
+                      onPreview={() => setPreviewCertificate(certificate)}
+                    />
                   )}
                 </div>
 
@@ -148,42 +125,19 @@ function Certifications() {
         </div>
       </div>
 
-      {previewCertificate && (
-        <div
-          className="certificate_modal"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${previewCertificate.title} certificate preview`}
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) {
-              setPreviewCertificate(null);
-            }
-          }}
-        >
-          <div className="certificate_modal_panel">
-            <div className="certificate_modal_header">
-              <div>
-                <span>Certificate Preview</span>
-                <h3>{previewCertificate.title}</h3>
-              </div>
-              <button
-                type="button"
-                className="certificate_modal_close"
-                onClick={() => setPreviewCertificate(null)}
-                aria-label="Close certificate preview"
-              >
-                <RiCloseLine />
-              </button>
-            </div>
-            <div className="certificate_modal_image">
-              <img
-                src={previewCertificate.image}
-                alt={`${previewCertificate.title} certificate`}
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      <CredentialModal
+        credential={
+          previewCertificate
+            ? {
+                source: previewCertificate.image,
+                title: previewCertificate.title,
+                altText: `${previewCertificate.title} certificate`,
+                modalLabel: "Certificate Preview",
+              }
+            : null
+        }
+        onClose={() => setPreviewCertificate(null)}
+      />
     </section>
   );
 }

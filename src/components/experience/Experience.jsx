@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./experience.css";
+import zaitiCertificate from "../../assets/Zaiti_Certificate.pdf";
+import zaitiCertificatePreview from "../../assets/Zaiti_Certificate_Preview.png";
+import qassimTechCertificate from "../../assets/Qassim_Tech_Certificate.JPG";
+import {
+  CredentialModal,
+  CredentialThumbnail,
+} from "../credential/CredentialPreview";
 
 const experienceData = [
   {
@@ -12,6 +19,14 @@ const experienceData = [
       "Contributed to Zaiti's customer dashboard by developing and improving features across Invoices, Wallet, Coupons, Rewards, Roulette, and Support Tickets.",
       "Worked on API integration, responsive user experiences, testing, debugging, and resolving issues across different features.",
     ],
+    credential: {
+      source: zaitiCertificate,
+      thumbnailSource: zaitiCertificatePreview,
+      type: "pdf",
+      title: "Zaiti for Car Services Experience Certificate",
+      altText: "First page of Zaiti for Car Services experience certificate",
+      modalLabel: "Experience Certificate Preview",
+    },
   },
   {
     id: 2,
@@ -23,6 +38,13 @@ const experienceData = [
       "Contributed to an AI-powered customer support system designed to automate and improve customer interactions.",
       "Worked on a multi-agent academic platform with task notifications, attendance tracking, reporting, and meeting scheduling.",
     ],
+    credential: {
+      source: qassimTechCertificate,
+      type: "image",
+      title: "Qassim Tech Program Certificate",
+      altText: "Qassim Tech AI Systems and Agents Program certificate",
+      modalLabel: "Program Certificate Preview",
+    },
   },
   {
     id: 3,
@@ -38,6 +60,8 @@ const experienceData = [
 ];
 
 function Experience() {
+  const [previewCredential, setPreviewCredential] = useState(null);
+
   return (
     <section id="experience">
       <div className="container">
@@ -51,24 +75,53 @@ function Experience() {
         </div>
 
         <div className="experience_grid reveal-stagger">
-          {experienceData.map(({ id, company, role, date, details }) => (
-            <article key={id} className="experience_card">
-              <div className="exp_header">
-                <h3>{company}</h3>
-                <span className="exp_date">{date}</span>
-              </div>
-              <h4 className="exp_role">{role}</h4>
-              <ul className="exp_details">
-                {details.map((detail, idx) => (
-                  <li key={idx} className="exp_detail_item">
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+          {experienceData.map(
+            ({ id, company, role, date, details, credential }) => (
+              <article
+                key={id}
+                className={`experience_card ${credential ? "has_credential" : ""}`}
+              >
+                <div className="experience_card_layout">
+                  <div className="experience_card_copy">
+                    <div className="exp_header">
+                      <h3>{company}</h3>
+                      {!credential && <span className="exp_date">{date}</span>}
+                    </div>
+                    <h4 className="exp_role">{role}</h4>
+                    <ul className="exp_details">
+                      {details.map((detail, idx) => (
+                        <li key={idx} className="exp_detail_item">
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {credential && (
+                    <div className="experience_credential_column">
+                      <span className="exp_date">{date}</span>
+                      <CredentialThumbnail
+                        {...credential}
+                        className={`experience_credential_thumbnail ${
+                          credential.type === "pdf"
+                            ? "experience_pdf_thumbnail"
+                            : ""
+                        }`.trim()}
+                        onPreview={() => setPreviewCredential(credential)}
+                      />
+                    </div>
+                  )}
+                </div>
+              </article>
+            ),
+          )}
         </div>
       </div>
+
+      <CredentialModal
+        credential={previewCredential}
+        onClose={() => setPreviewCredential(null)}
+      />
     </section>
   );
 }

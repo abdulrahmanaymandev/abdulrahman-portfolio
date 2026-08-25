@@ -244,6 +244,12 @@ body.modal-open {
   transition: filter 0.35s ease, transform 0.35s var(--ease-out);
 }
 
+.certificate_thumbnail.meta_certificate_thumbnail img {
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+}
+
 .certificate_thumbnail span {
   position: absolute;
   right: 0.65rem;
